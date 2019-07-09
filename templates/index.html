@@ -1,0 +1,35 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+  
+  <body>
+
+    <style>
+      .color_one {
+        background-color: {{ color_one }};
+      }
+
+      .color_two {
+        background-color: {{ color_two }};
+
+      }
+        </style>
+
+  <table>
+  {% for i in range(4): %} 
+    <tr>
+            {% for j in range(var_x): %}
+            <td class = 'color_one'></td>
+            <td class = 'color_two'></td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for j in range(var_y): %}
+            <td class = 'color_two'></td>
+            <td class = 'color_one'></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+      
+  </table>
+</body>
+</html>
